@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>INSG Indonesia Mines Satellite Tracker</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+      <h2>Indonesia Mines Tracker</h2>
+      <p>Use this page to search for a specific mine!</p>
+      <form id="form-search">
+        <h1>Search Mine</h1>
+      
+        <label for="company">Company Name:</label><br>
+        <input type="text" id="input-company" name="company" style="width: 100%; padding: 8px; margin-bottom: 12px;"><br>
+      
+        <label for="iup">IUP:</label><br>
+        <input type="text" id="iup" name="input-iup" style="width: 100%; padding: 8px; margin-bottom: 12px;"><br>
+      
+        <label for="location">Location:</label><br>
+        <input type="text" id="location" name="input-location" style="width: 100%; padding: 8px; margin-bottom: 12px;"><br>
+      
+        <button type="submit" id="search-btn">
+          Search
+        </button>
+      </form>
+    </header>
+  
+    <main id="mineCards">
+      <!-- .mine-card elements will go here -->
+    </main>
+  
+
+  
+    <footer>
+      <blockquote cite="https://dataspace.copernicus.eu/">
+        European Space Agency (ESA). <em>Copernicus Sentinel Data</em>. Contains modified Copernicus Sentinel data 2025.
+        Accessed via
+        <a href="https://dataspace.copernicus.eu/" target="_blank" rel="noopener noreferrer">
+          Copernicus Data Space Ecosystem
+        </a> March 1 to April 8, 2025.
+      </blockquote>
+      <blockquote cite="https://geoportal.esdm.go.id/minerba/">
+        Ministry of Energy and Mineral Resources of Indonesia. <em>Minerba One Map Indonesia (MOMI)</em>.
+        <a href="https://geoportal.esdm.go.id/minerba/" target="_blank" rel="noopener noreferrer">
+          https://geoportal.esdm.go.id/minerba/
+        </a>. Accessed March 1 to April 8, 2025.
+      </blockquote>
+    </footer>
+
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption" class="caption"></div>
+  
+    <!-- Navigation Arrows -->
+    <span class="nav-arrow left-arrow">&#10094;</span>
+    <span class="nav-arrow right-arrow">&#10095;</span>
+    </div>
+  
+    <script src="scripts_search_mine.js"></script>
+  </body>
+</html>

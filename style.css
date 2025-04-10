@@ -1,0 +1,294 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6fcff;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+}
+
+a {
+    color: #007BFF;           /* Default link color (blue) */
+    text-decoration: none;    /* Removes underline */
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;           /* Darker blue on hover */
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: #003f7f;           /* Even darker blue when clicked */
+  }
+  
+  a:visited {
+    color: #6c757d;           /* Grayish for visited links */
+  }
+
+
+/* ---------- Header ---------- */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    color: #00254b;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #00254b;
+    margin: 0.25rem 0;
+}
+
+/* ---------- Mine Cards Layout ---------- */
+#mineCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* ---------- Individual Mine Card ---------- */
+.mine-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.mine-card:hover {
+    transform: scale(1.01);
+}
+
+.mine-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.mine-table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.company-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    color: #002e5c;
+    background-color:#00000028;
+    padding: 12px 0;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #ddd;
+}
+
+.image-tr {
+
+}
+
+.image-td {
+    text-align: center;
+    padding: 10px;
+}
+
+.mine-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto 8px;
+    cursor: zoom-in;
+}
+
+figcaption {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* ---------- Button Styling ---------- */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+#load-more-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#load-more-btn:hover {
+    background-color: #1a252f;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ccc;
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    overflow: auto;  /*enables scroll (vertical and horizontal)*/
+    background-color: rgba(117, 117, 117, 0.904);
+  
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  /* Modal image */
+  .modal-content {
+    max-width: none;     /* allow it to grow past original bounds */
+    height: auto;
+    transition: width 0.3s ease;
+    display: inline-block;
+    cursor: zoom-in;
+    transform-origin: top center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  .caption {
+    color: #ddd;
+    font-size: 0.95rem;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10vw;
+  }
+  
+  /* Close button */
+  .modal .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Navigation arrows */
+  .nav-arrow {
+    position: fixed;
+    top: 50%;
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    z-index: 1000;
+    transform: translateY(-50%);
+  }
+  
+  .left-arrow {
+    left: 30px;
+  }
+  
+  .right-arrow {
+    right: 30px;
+  }
+
+
+
+
+  /* FORM styling */
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Headline */
+  form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Label styling */
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  /* Input fields */
+  form input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+  }
+  
+  form input[type="text"]:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Submit button */
+  form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f3661;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
