@@ -5,6 +5,13 @@
   <title>INSG Indonesia Mines Satellite Tracker</title>
   <link href="style.css" rel="stylesheet" />
 </head>
+  <script>
+  const password = prompt("Enter password to access the viewer:");
+  if (password !== "ffp123") {
+    document.body.innerHTML = "<h2 style='text-align:center;'>Access denied</h2>";
+    throw new Error("Access denied");
+  }
+</script>
 <body>
     <header>
       <h2>Indonesia Mines Tracker</h2>
